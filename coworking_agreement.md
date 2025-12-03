@@ -3,23 +3,26 @@
 Talk through each section with your partner. Add notes on what you discussed and agreed upon in each section. At the bottom, type your names to sign off on your agreement.
 
 ## Accessibility Needs
-*What does each team member need access to in order to succeed and show up the best they can?*
+-gina:open communicaiton,and a supportive environment to do their best work.
+- Helen: 
+
 
 ## Collaboration vs. Individual Work Expectations
-*Clarify your collaboration expectations - does your group want to write code together all of the time? Or divide work to do independently, then come together to share accomplishments? What tools and technologies can help your collaboration?*
+-gina: divde work based on strenghs, work indeoendently,and then come together to review
+
 
 ## Learning Style
-*How does each team member learn best in project settings?*
+-gina: hands-on practice and reviewing example works during class
 
-## Preferred Feedback Style
-*How does each team member best receive feedback?*
+en: I work best reading the README by myself and making my notes and them gettin
+-Helen: I don’t mind straightforward feedback as long as it’s respectful and focused on the work.g together to put our ideas in place and discuss about our approach. When we wo-Helen: We are open for feedbacks any time.k separete after we write the code we I want to improve being more concise when explaining my thought process. Sometimes I over-explain because I want to be clear, so I’m working on summarizing better and sharing my reasoning in a more structured way.gina: traighHelen Larson, e others are comfortablDecember 3rd, 2025 Team Communication Skill to Improve
+-gina: improve our active listening as a 
 
-## One Team Communication Skill to Improve
-*What is a teamwork-related skill you want to work on?*
+team, making sure everyone feels heard and understood.
 
 ## Optional: Other agreements
 *Other co-working agreements that were not captured in the above sections.*
 
 ## Signatures
-______________ _______________
-Date: _________
+_____gina_________ _helen______________
+Date: __12/3/2025_______
