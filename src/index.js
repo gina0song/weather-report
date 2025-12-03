@@ -22,7 +22,7 @@ if (currentTemperature >= 80) {
   } else if (currentTemperature >= 70) {
     tempDisplay.style.color = "orange";
   } else if (currentTemperature >= 60) {
-    tempDisplay.style.color = "goldenrod"; // yellow-ish
+    tempDisplay.style.color = "goldenrod"; 
   } else if (currentTemperature >= 50) {
     tempDisplay.style.color = "green";
   } else {
