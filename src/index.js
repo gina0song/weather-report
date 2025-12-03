@@ -13,7 +13,6 @@ const landscape = document.getElementById("landscape");
 //update display
 function updateTemperatureDisplay() {
   tempDisplay.textContent = currentTemperature;
-  updateTemperatureColor();
 }
 
 // Temperature color ranges
@@ -29,9 +28,8 @@ if (currentTemperature >= 80) {
     tempDisplay.style.color = "teal";
   }
 
-// Landscape ranges
-
-if (currentTemperature >= 80) {
+  // Landscape ranges
+  if (currentTemperature >= 80) {
     landscape.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
   } else if (currentTemperature >= 70) {
     landscape.textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
@@ -40,7 +38,6 @@ if (currentTemperature >= 80) {
   } else {
     landscape.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
   }
-
 
 //add click listeners to the spans
 increaseTempControl.addEventListener('click' ,() => {
@@ -56,42 +53,26 @@ decreaseTempControl.addEventListener('click', () => {
 // Initialize
 updateTemperatureDisplay();
 
+// Wave 3: Naming the City
 
+const cityNameInput = document.getElementById("cityNameInput");
+const headerCityName = document.getElementById("headerCityName");
+const cityNameReset = document.getElementById("cityNameReset");
 
-// function to change both text and background of the temperature
+// Update the city name live as the user types
+const updateCityName = () => {
+  headerCityName.textContent = cityNameInput.value;
+};
 
-// function updateTemperatureColor(){
-//   const tempElement = document.getElementById('tempValue');
+// Reset city name back to "Seattle"
+const resetCityName = () => {
+  cityNameInput.value = "Seattle";
+  updateCityName();
+};
 
-//   if (currentTemperature >= 80){
-//     tempElement.style.color = 'red';
-//   } else if (currentTemperature >= 70) {
-//     tempElement.style.color = 'orange'
-//   } else if (currentTemperature >= 60){
-//     tempElement.style.color = 'yellow';
-//   } else if (currentTemperature >= 50){
-//     tempElement.style.color = 'green';
-//   } else {
-//     tempElement.style.color = 'teal';
-//   }
-// }
+// Event listeners
+cityNameInput.addEventListener("input", updateCityName);
+cityNameReset.addEventListener("click", resetCityName);
 
-
-function updateTemperatureColor() {
-  if (currentTemperature >= 80) {
-    tempDisplay.style.backgroundColor = 'red';
-    tempDisplay.style.color = 'white'; 
-  } else if (currentTemperature >= 70) {
-    tempDisplay.style.backgroundColor = 'orange';
-    tempDisplay.style.color = 'white';
-  } else if (currentTemperature >= 60) {
-    tempDisplay.style.backgroundColor = 'yellow';
-    tempDisplay.style.color = 'black';
-  } else if (currentTemperature >= 50) {
-    tempDisplay.style.backgroundColor = 'green';
-    tempDisplay.style.color = 'white';
-  } else {
-    tempDisplay.style.backgroundColor = 'teal';
-    tempDisplay.style.color = 'white';
-  }
-}
+// Initialize
+updateCityName();
