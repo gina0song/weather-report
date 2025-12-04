@@ -116,3 +116,45 @@ const getCoordinates = async (cityName) => {
     return null;
   }
 };
+
+
+//Function to get weather from coordinates
+const getWeather = async(lat, lon) =>{
+  try {
+    const response = await axios.get('http://localhost:5000/weather',{
+      params:{
+        lat: lat,
+        lon: lon
+      }
+    });
+
+    // Temp is in Kelvin, convert to Fahrenheit
+     const convertKelvinToFahrenheit = (temp) => {
+      return ((temp - 273.15) * (9 / 5) + 32);
+    };
+
+    const kelvinTemp = response.data.main.temp;
+    const fahrenheitTemp = Math.round(convertKelvinToFahrenheit(kelvinTemp));
+
+    return fahrenheitTemp;
+
+  } catch (error) {
+    console.error('Error getting weather:', error);
+    return null;
+  }
+};
+
+
+// Function to get realtime temp
+//listener for the button
+const getRealtimeTemperature = async () => {
+  const cityName = cityNameInput.value;
+  
+  
+
+}
+
+currentTempButton.addEventListener('cick', getRealtimeTemperature);
+
+
+
