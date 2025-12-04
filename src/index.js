@@ -76,12 +76,12 @@ const cityNameReset = document.getElementById('cityNameReset');
 
 // Update the city name live as the user types
 const updateCityName = () => {
-  headerCityName.textContent = cityNameInput.value;
+  headerCityName.textContent = cityNameInput.value; // updates the displayed name
 };
 
-// Reset city name back to "Seattle"
+// Wave 6, Reset city name back to "Seattle"
 const resetCityName = () => {
-  cityNameInput.value = 'Seattle';
+  cityNameInput.value = 'Seattle'; // Sets the input back to default
   updateCityName();
 };
 
@@ -172,4 +172,26 @@ const getRealtimeTemperature = async () => {
 currentTempButton.addEventListener('click', getRealtimeTemperature);
 
 
+// Wave 5: Sky selection
 
+const skySelect = document.getElementById('skySelect');
+const sky = document.getElementById('sky');
+
+const skyColorsAndValue = {
+  sunny: '☁️ ☁️ ☁️ ☀️ ☁️ ☁️',
+  cloudy: '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️',
+  rainy: '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧',
+  snowy: '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨'
+};
+
+const updateSky = () => {
+  const selected = skySelect.value.toLowerCase();
+  sky.textContent = skyColorsAndValue[selected];
+
+};
+
+skySelect.addEventListener('change', updateSky);
+
+// Inicialize on page load
+
+updateSky();
