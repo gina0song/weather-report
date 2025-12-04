@@ -14,6 +14,7 @@ const landscape = document.getElementById('landscape');
 function updateTemperatureDisplay() {
   tempDisplay.textContent = currentTemperature;
   updateTemperatureColor();
+  updateLandscape(); 
 }
 
 
@@ -55,16 +56,17 @@ function updateTemperatureColor() {
 
 
 // Landscape ranges
-if (currentTemperature >= 80) {
-  landscape.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
-} else if (currentTemperature >= 70) {
-  landscape.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
-} else if (currentTemperature >= 60) {
-  landscape.textContent = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
-} else {
-  landscape.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+function updateLandscape() {
+  if (currentTemperature >= 80) {
+    landscape.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
+  } else if (currentTemperature >= 70) {
+    landscape.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
+  } else if (currentTemperature >= 60) {
+    landscape.textContent = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
+  } else {
+    landscape.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+  }
 }
-
 
 // Wave 3: Naming the City
 
