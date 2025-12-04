@@ -14,7 +14,7 @@ const landscape = document.getElementById('landscape');
 function updateTemperatureDisplay() {
   tempDisplay.textContent = currentTemperature;
   updateTemperatureColor();
-  updateLandscape(); 
+  updateLandscape();
 }
 
 
@@ -55,7 +55,7 @@ function updateTemperatureColor() {
 }
 
 
-// Landscape ranges
+// Landscape ranges--change the landscape emojis based on temperature
 function updateLandscape() {
   if (currentTemperature >= 80) {
     landscape.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
@@ -91,3 +91,28 @@ cityNameReset.addEventListener('click', resetCityName);
 
 // Initialize
 updateCityName();
+
+
+
+
+// Wave 4: Calling APIs
+const currentTempButton = document.getElementById('currentTempButton');
+
+// Function to fetch and update temperature based on city name
+const getCoordinates = async (cityName) => {
+  try {
+    const response = await axios.get('http://localhost:5000/location',{
+      params:{
+        q: cityName
+      }
+    });
+
+    const lat = response.data[0].lat;
+    const lon = response.data[0].lon;
+
+    return {lat,lon};
+  } catch (error){
+    console.error('Error getting coordinates:', error);
+    return null;
+  }
+};
