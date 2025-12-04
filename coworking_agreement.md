@@ -24,5 +24,5 @@ team, making sure everyone feels heard and understood.
 *Other co-working agreements that were not captured in the above sections.*
 
 ## Signatures
-_____gina_________ _helen______________
+_____ gina_________ _helen______________
 Date: __12/3/2025_______
