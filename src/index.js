@@ -129,7 +129,7 @@ const getWeather = async(lat, lon) =>{
     });
 
     // Temp is in Kelvin, convert to Fahrenheit
-     const convertKelvinToFahrenheit = (temp) => {
+    const convertKelvinToFahrenheit = (temp) => {
       return ((temp - 273.15) * (9 / 5) + 32);
     };
 
@@ -149,12 +149,27 @@ const getWeather = async(lat, lon) =>{
 //listener for the button
 const getRealtimeTemperature = async () => {
   const cityName = cityNameInput.value;
-  
-  
 
-}
+  getCoordinates(cityName)
+    .then((coords) => {
+      if (!coords) return;
 
-currentTempButton.addEventListener('cick', getRealtimeTemperature);
+      return getWeather(coords.lat, coords.lon);
+    })
+    .then((temp) => {
+      if (!temp) return;
+
+      currentTemperature = temp;
+      updateTemperatureDisplay();
+      return temp;
+    })
+    .catch((error) =>{
+      console.log('error in getRealtimeTemperature!', error);
+    });
+};
+
+// Event listener for the button
+currentTempButton.addEventListener('click', getRealtimeTemperature);
 
 
 
