@@ -164,3 +164,19 @@ background-color: lightblue;
 .snowy {
 background-color: lightsteelblue;
 }
+
+
+/* Add CSS Styling for landscape image */
+#landscapeImage {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+#landscape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
