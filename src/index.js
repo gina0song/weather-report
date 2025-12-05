@@ -32,15 +32,34 @@ const updateTemperatureColor = () => {
 
 
 // Landscape ranges--change the landscape emojis based on temperature
+// const updateLandscape = () => {
+//   if (currentTemperature >= 80) {
+//     landscape.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
+//   } else if (currentTemperature >= 70) {
+//     landscape.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
+//   } else if (currentTemperature >= 60) {
+//     landscape.textContent = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
+//   } else {
+//     landscape.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+//   }
+// };
+
+// Updated Landscape function to change images based on temperature
 const updateLandscape = () => {
+  const landscapeImage = document.getElementById('landscapeImage');
+  
   if (currentTemperature >= 80) {
-    landscape.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
+    landscapeImage.src = 'images/desert.jpg';
+    landscapeImage.alt = 'Desert landscape';
   } else if (currentTemperature >= 70) {
-    landscape.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
+    landscapeImage.src = 'images/spring.jpg';
+    landscapeImage.alt = 'Spring landscape';
   } else if (currentTemperature >= 60) {
-    landscape.textContent = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
+    landscapeImage.src = 'images/autumn.jpg';
+    landscapeImage.alt = 'Autumn landscape';
   } else {
-    landscape.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+    landscapeImage.src = 'images/winter.jpg';
+    landscapeImage.alt = 'Winter landscape';
   }
 };
 
