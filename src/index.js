@@ -7,14 +7,15 @@ let currentTemperature = 72;
 const increaseTempControl = document.getElementById('increaseTempControl');
 const decreaseTempControl = document.getElementById('decreaseTempControl');
 const tempDisplay = document.getElementById('tempValue');
-const landscape = document.getElementById('landscape');
+const landscapeImage = document.getElementById('landscapeImage');
+// const landscape = document.getElementById('landscape');
 
 
 // Temperature color ranges--change both text and background of the temperature
 const updateTemperatureColor = () => {
   if (currentTemperature >= 80) {
     tempDisplay.style.backgroundColor = 'red';
-    tempDisplay.style.color = 'white'; 
+    tempDisplay.style.color = 'white';
   } else if (currentTemperature >= 70) {
     tempDisplay.style.backgroundColor = 'orange';
     tempDisplay.style.color = 'white';
@@ -46,8 +47,6 @@ const updateTemperatureColor = () => {
 
 // Updated Landscape function to change images based on temperature
 const updateLandscape = () => {
-  const landscapeImage = document.getElementById('landscapeImage');
-  
   if (currentTemperature >= 80) {
     landscapeImage.src = 'images/desert.jpg';
     landscapeImage.alt = 'Desert landscape';
